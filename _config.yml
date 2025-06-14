@@ -1,0 +1,11 @@
+plugins:
+  - jekyll-seo-tag
+
+title: Bruckhaufen Vanguard - Jazz Band aus Wien
+description: Bruckhaufen Vanguard ist eine sechsköpfige Jazzband aus Wien – buchen Sie mitreißenden Live-Jazz für Events, Feiern und Konzerte.
+url: "https://bruckhaufen-vanguard.at"
+timezone: Europe/Vienna
+
+author:
+  name: Florian Wörister
+  email: ffwoerister@gmail.com
