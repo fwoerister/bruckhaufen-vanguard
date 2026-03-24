@@ -21,3 +21,18 @@ h2 {
 .nav-brand {
     margin: 1rem;
 }
+
+.audio-track {
+    margin: 0.5rem;
+    padding:1rem;
+    border-radius: 8px;
+}
+
+.audio-track p {
+    font-weight: bold;
+}
+
+.audio-track:hover {
+    background-color: lightyellow;
+    cursor: pointer;
+}
