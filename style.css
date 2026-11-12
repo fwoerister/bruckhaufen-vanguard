@@ -1,38 +1,164 @@
 @font-face {
     font-family: "Monoton";
-    src: url('fonts/Monoton-Regular.ttf');
+    src: url('assets/fonts/Monoton-Regular.ttf');
+    font-display: swap;
 }
 
-html,
-body,
-h1,
-h2 {
+:root {
+    --accent: #ffc107;
+    --dark: #212529;
+    --nav-height: 96px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Keep anchored sections from hiding under the sticky navbar */
+section[id] {
+    scroll-margin-top: var(--nav-height);
+}
+
+/* Display font only for headings and branding — body text stays readable */
+.brand,
+.section-title {
     font-family: "Monoton", sans-serif;
+    font-weight: normal;
 }
 
+/* ---------- Navbar ---------- */
+.brand {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.1;
+    color: #fff;
+}
+
+.navbar .nav-link {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.9rem;
+}
+
+.navbar .nav-link:hover {
+    color: var(--accent);
+}
+
+/* ---------- Band photo ---------- */
 .band-img {
     width: 100%;
 }
 
-.navbar {
-    box-shadow: black;
+/* ---------- Sections ---------- */
+.section {
+    padding: 4.5rem 0;
 }
 
-.nav-brand {
-    margin: 1rem;
+.section-alt {
+    background-color: #f8f5ee;
 }
 
+.section-dark {
+    background-color: var(--dark);
+    color: #fff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: clamp(2.25rem, 7vw, 4rem);
+    margin-bottom: 2.5rem;
+}
+
+/* ---------- Music ---------- */
 .audio-track {
-    margin: 0.5rem;
-    padding:1rem;
-    border-radius: 8px;
-}
-
-.audio-track p {
-    font-weight: bold;
+    height: 100%;
+    padding: 1.25rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .audio-track:hover {
-    background-color: lightyellow;
-    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.audio-track p {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.track-no {
+    color: #b8860b;
+    margin-right: 0.35rem;
+}
+
+.audio-track audio {
+    width: 100%;
+}
+
+/* ---------- Video ---------- */
+.band-video {
+    width: 100%;
+    max-width: 720px;
+    border-radius: 10px;
+    background: #000;
+}
+
+/* ---------- Photos ---------- */
+.photo-carousel {
+    max-width: 960px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--dark);
+}
+
+/* Fixed frame so portrait and landscape photos don't make the page jump */
+.photo-carousel .carousel-item img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+}
+
+/* ---------- Contact ---------- */
+.contact-card {
+    height: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.contact-label {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-bottom: 0.4rem;
+}
+
+.contact-card a {
+    font-size: 1.15rem;
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-card a:hover {
+    color: #b8860b;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    background: var(--dark);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+.brand-small {
+    font-size: 1.1rem;
 }
