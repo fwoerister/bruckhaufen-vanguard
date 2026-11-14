@@ -245,6 +245,15 @@
                 if (menu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(menu).hide();
             });
         });
+
+        // Only one track at a time: starting an audio file pauses all others
+        document.querySelectorAll('audio').forEach(function (audio) {
+            audio.addEventListener('play', function () {
+                document.querySelectorAll('audio').forEach(function (other) {
+                    if (other !== audio) other.pause();
+                });
+            });
+        });
     </script>
 
 </body>
