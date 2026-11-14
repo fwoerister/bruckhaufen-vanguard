@@ -5,13 +5,13 @@
 }
 
 :root {
-    /* Palette taken from the hero photo: brass, the red rug, white shirts, dark suits */
-    --dark: #1d1b18;
+    /* Palette taken from the hero photo: greyscale scene, brass and the amber double bass */
+    --dark: #1b1b1b;
     --accent: #c9a14a;
-    --accent-strong: #b3282d;
-    --cream: #f6f2ea;
+    --accent-strong: #a8530a;
+    --light: #f2f2f2;
     --text: #222;
-    --muted: #6c6a66;
+    --muted: #6b6b6b;
     --nav-height: 96px;
 }
 
@@ -82,12 +82,12 @@ section[id] {
 }
 
 .section-alt {
-    background-color: var(--cream);
+    background-color: var(--light);
 }
 
 .section-dark {
     background-color: var(--dark);
-    color: var(--cream);
+    color: var(--light);
 }
 
 .section-title {
@@ -182,7 +182,7 @@ section[id] {
 /* ---------- Footer ---------- */
 .footer {
     background: var(--dark);
-    color: rgba(246, 242, 234, 0.7);
+    color: rgba(242, 242, 242, 0.7);
     border-top: 3px solid var(--accent);
     padding: 1.5rem 0;
     font-size: 0.9rem;
